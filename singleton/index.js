@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const using1_1 = require("./using1");
+const using2_1 = require("./using2");
+const PaperSingleton_1 = require("./PaperSingleton");
+(0, using1_1.addLineUsing1)();
+(0, using2_1.addLineUsing2)();
+(0, using1_1.addCustomLineUsing1)("Test");
+(0, using2_1.addCustomLineUsing2)("Test2");
+PaperSingleton_1.PaperSingleton.getInstance().addLine("Test from index");
+(0, using1_1.addCustomLineUsing1)('Teste3');
+console.log(PaperSingleton_1.PaperSingleton.getInstance().lines);
